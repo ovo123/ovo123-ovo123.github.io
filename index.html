@@ -1,321 +1,299 @@
+
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/">
 
-  
+
+
+  <title>ovo123 = Hexo</title>
 <meta name="generator" content="Hexo 6.1.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
       </div>
     </div>
   </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-项目框架学习Lua版" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" class="article-date">
-  <time class="dt-published" datetime="2022-05-10T12:05:54.543Z" itemprop="datePublished">2022-05-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="项目框架学习"><a href="#项目框架学习" class="headerlink" title="项目框架学习"></a>项目框架学习</h2><h4 id="BaseView基类："><a href="#BaseView基类：" class="headerlink" title="BaseView基类："></a>BaseView基类：</h4><p>以文件名字加冒号调用类似于这种的BaseView:__init()皆为方法</p>
-<h5 id="初始化方法-init"><a href="#初始化方法-init" class="headerlink" title="初始化方法 __init"></a>初始化方法 __init</h5><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:__init</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="定义的成员变量-defineVar"><a href="#定义的成员变量-defineVar" class="headerlink" title="定义的成员变量 __defineVar"></a>定义的成员变量 __defineVar</h5><p>定义view模块需要的成员变量</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:__defineVar</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="打开界面前的预加载-AddPreLoadList"><a href="#打开界面前的预加载-AddPreLoadList" class="headerlink" title="打开界面前的预加载 AddPreLoadList"></a>打开界面前的预加载 AddPreLoadList</h5><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">preLoad_list = <span class="literal">false</span>,   <span class="comment">-- 打开界面之前需要预加载的资源,除了本模块UI资源外的</span></span><br></pre></td></tr></table></figure>
-
-<p>将ab的名字，资源列表，以及类型插入到preLoad_list表中</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:AddPreLoadList</span><span class="params">(abName, assetNameList, type)</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="从更节点开始搜寻子对象-GetChild"><a href="#从更节点开始搜寻子对象-GetChild" class="headerlink" title="从更节点开始搜寻子对象 GetChild"></a>从更节点开始搜寻子对象 GetChild</h5><p>该接口暴露给外部调用</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cache_findChild = <span class="literal">false</span>,  <span class="comment">-- 缓存FindChild的接口</span></span><br></pre></td></tr></table></figure>
-
-<p>我理解的是从最外层加载的预设开始一层一层的往下找</p>
-<p>返回一个成员方法self.cache_findChild(self.transform,name)</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChild</span><span class="params">(name)</span></span></span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">self</span>.cache_findChild <span class="keyword">and</span> <span class="built_in">self</span>.transform <span class="keyword">then</span></span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">self</span>.cache_findChild(<span class="built_in">self</span>.transform,name)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="获取子对象身上的组件-GetChildComponent"><a href="#获取子对象身上的组件-GetChildComponent" class="headerlink" title="获取子对象身上的组件 GetChildComponent"></a>获取子对象身上的组件 GetChildComponent</h5><p>该接口暴露给外部调用</p>
-<p>首先通过上面的GetChild方法来获取到子物体</p>
-<p>有一点要注意 name，com都是字符类型</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChildComponent</span><span class="params">(name,com)</span></span></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">self</span>:GetChild(name):GetComponent(com)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="获取多个孩子transform-GetChildTransforms"><a href="#获取多个孩子transform-GetChildTransforms" class="headerlink" title="获取多个孩子transform GetChildTransforms"></a>获取多个孩子transform GetChildTransforms</h5><p>获取到utilManager的组件方法，供外界使用接口</p>
-<p>这里其实names换成namsList更好理解一些</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--获取多个孩子transform</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChildTransforms</span><span class="params">(names)</span></span></span><br><span class="line">	<span class="keyword">return</span> GetChildTransforms(<span class="built_in">self</span>.transform, names)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--获取多个孩子go</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChildGameObjects</span><span class="params">(names)</span></span></span><br><span class="line">	<span class="keyword">return</span> GetChildGameObjects(<span class="built_in">self</span>.transform, names)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--获取多个孩子image</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChildImages</span><span class="params">(names)</span></span></span><br><span class="line">	<span class="keyword">return</span> GetChildImages(<span class="built_in">self</span>.transform, names)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--获取多个孩子text</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:GetChildTexts</span><span class="params">(names)</span></span></span><br><span class="line">	<span class="keyword">return</span> GetChildTexts(<span class="built_in">self</span>.transform, names)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="是否真的打开界面-HasOpen"><a href="#是否真的打开界面-HasOpen" class="headerlink" title="是否真的打开界面 HasOpen"></a>是否真的打开界面 HasOpen</h5><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isPop = <span class="literal">false</span>,                  <span class="comment">-- 是否可见</span></span><br><span class="line">is_loaded = <span class="literal">false</span>,				<span class="comment">-- 是否已经加载完</span></span><br><span class="line">wait_for_hide = <span class="literal">false</span>,			<span class="comment">-- 等待加载完隐藏</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:HasOpen</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-<p>供外部调用接口</p>
-<p>返回bool值判断界面是否真的打开</p>
-<h5 id="移除销毁状态-RemoveDestroyTimer"><a href="#移除销毁状态-RemoveDestroyTimer" class="headerlink" title="移除销毁状态 RemoveDestroyTimer"></a>移除销毁状态 RemoveDestroyTimer</h5><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:RemoveDestroyTimer</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-<p>调用了TimerQuest.CancelQuest(GlobalTimerQuest, self.destroy_timer)将移除状态保存起来</p>
-<h5 id="打开界面-Open"><a href="#打开界面-Open" class="headerlink" title="打开界面 Open"></a>打开界面 Open</h5><p>这个方法是打开界面的主要方法</p>
-<p>通过修改以下这些字段控制界面view的显示</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isPop = <span class="literal">false</span>,    				<span class="comment">-- 是否可见</span></span><br><span class="line">wait_for_hide = <span class="literal">false</span>,			<span class="comment">-- 等待加载完隐藏</span></span><br><span class="line">_use_delete_method = <span class="literal">false</span>,		<span class="comment">-- 是否调用过delete函数</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:Open</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-<p>移除定时器</p>
-<p>打开的模式默认为OpenMode.OpenOnly，只打开界面</p>
-<ol>
-<li>如果是切换场景关闭View，调用EventSystem.Bind()绑定界面，拿到EventName中对应的EventId SceneEventType.SCENE_CHANGED 并注册关闭View事件，然后调用auto_close_view方法字段关闭界面</li>
-<li>如果是重新进入场景关闭View，调用EventSystem.Bind()绑定界面，拿到EventName中对应的EventId SceneEventType.SCENE_REENTER 并注册关闭View事件，然后调用auto_close_view方法字段关闭界面</li>
-<li>如果是切换场景隐藏View，调用EventSystem.Bind()绑定界面，拿到EventName中对应的EventId SceneEventType.OPEN_SCENE_LOAD_VIEW 并注册切换场景隐藏View事件，然后调用auto_hide_view方法字段隐藏界面，若场景切换完毕，则注册EventName.SCENE_LOAD_VIEW_COMPLETE，调用auto_show_view方法字显示View</li>
-<li>如果是打开界面，需要关闭主界面，就注册EventName.CLOSE_ALL_VIEW事件，然后调用auto_close_view方法字段关闭所有的view</li>
-<li>新手引导注册EventName.TRIGGER_GUIDE_TYPE事件，并执行onTriggerGuideHandler()方法</li>
-</ol>
-<h5 id="异步加载资源-AsnycLoadLayout"><a href="#异步加载资源-AsnycLoadLayout" class="headerlink" title="异步加载资源 AsnycLoadLayout"></a>异步加载资源 AsnycLoadLayout</h5><p>需要先加载额外的依赖资源</p>
-<p>当一个界面时间大于15s都没有打开，那么就触发关闭的流程，避免卡住流程</p>
-<p>当没有预设的时候就创建一个新的空对象</p>
-<p>否则调用LuaViewManager.LoadView添加加载界面</p>
-<p>加载页面打开就确定</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:AsnycLoadLayout</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="异步资源加载完成之后打开界面-CreateMainWindow"><a href="#异步资源加载完成之后打开界面-CreateMainWindow" class="headerlink" title="异步资源加载完成之后打开界面 CreateMainWindow"></a>异步资源加载完成之后打开界面 CreateMainWindow</h5><p>在异步预加载资源之后，如果界面比较大，一时加载的资源比较多的时候，就要做延迟处理LuaViewManager.AddDelayQueue加入到延迟队列</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:CreateMainWindow</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="处理打开界面深度以及层级-AfterOpen"><a href="#处理打开界面深度以及层级-AfterOpen" class="headerlink" title="处理打开界面深度以及层级 AfterOpen"></a>处理打开界面深度以及层级 AfterOpen</h5><p>若界面需要等待隐藏时候就重新设置其深度值，并隐藏界面 UIZDepth.ResetUIZDepth(self)</p>
-<p>反之直接显示界面，在设置其层级 self:SetUIDepth(self.gameObject)</p>
-<p>大界面则需要加入到延迟显示队列中 </p>
-<p>不需要打开就直接调用 self:Close() 关闭</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:AfterOpen</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="立即销毁界面-CloseDestroy"><a href="#立即销毁界面-CloseDestroy" class="headerlink" title="立即销毁界面 CloseDestroy()"></a>立即销毁界面 CloseDestroy()</h5><p>调用此方法以后会立即从内存中销毁界面</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:CloseDestroy</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="不需要立即从内存销毁界面-Destroy"><a href="#不需要立即从内存销毁界面-Destroy" class="headerlink" title="不需要立即从内存销毁界面 Destroy()"></a>不需要立即从内存销毁界面 Destroy()</h5><p>调用此方法不会将界面从内存中马上清楚，会保留在内存中，解除绑定事件</p>
-<p>并将状态重置，然后干掉界面引用</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseView:Destroy</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>界面打开模式，默认为OpenOnly（只打开）,  还有一种OpenToggle（界面没有打开就打开，打开了就关闭）模式</p>
-<p>界面关闭模式，默认为CloseDestroy（立即销毁）， 另一种是CloseVisible（隐藏）模式</p>
-<h4 id="BaseController基类："><a href="#BaseController基类：" class="headerlink" title="BaseController基类："></a>BaseController基类：</h4><h5 id="BaseController-init"><a href="#BaseController-init" class="headerlink" title="BaseController:__init()"></a>BaseController:__init()</h5><p>先绑定界面销毁事件监听回调，回调是依附于在界面Destroy的时候会触发BaseView.DestroyEvent函数，控制器监听到回调后就会调用self:clearViewQuoted(view)，检查界面是否正确的执行deleteMe方法进行释放</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BaseController:__init</span><span class="params">()</span></span></span><br><span class="line">	<span class="comment">--销毁引用</span></span><br><span class="line">	 <span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">onViewDestoryHandler</span><span class="params">(view)</span></span></span><br><span class="line">		 <span class="built_in">self</span>:clearViewQuoted(view)</span><br><span class="line">	 <span class="keyword">end</span></span><br><span class="line">	<span class="built_in">self</span>.clearViewQuoted_BindId = <span class="built_in">self</span>:Bind(BaseView.DestroyEvent,onViewDestoryHandler)	</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="BaseController-EnableCheckoutClear-bool"><a href="#BaseController-EnableCheckoutClear-bool" class="headerlink" title="BaseController:EnableCheckoutClear(bool)"></a>BaseController:EnableCheckoutClear(bool)</h5><p>controller实例的对象会在初始化时调用，会监听界面的BaseView.CreateView事件，然后将实例添加到view_list中</p>
-<p>当控制器监听到账户切换和角色切换就关闭所有的界面</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">self</span>:Bind(EventName.CHANGE_ACCOUNT, close_view)</span><br><span class="line"><span class="built_in">self</span>:Bind(EventName.CHANGE_ROLE, close_view)</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="BaseController-RegisterProtocal-id-func-name"><a href="#BaseController-RegisterProtocal-id-func-name" class="headerlink" title="BaseController:RegisterProtocal(id, func_name)"></a>BaseController:RegisterProtocal(id, func_name)</h5><p>注册指定协议响应的方法，然后编写一个闭包函数，函数内部会查找controller实例中是否存在指定方法名的方法，有就执行，接着将该方法和实例注册到协议处理类的register_list中</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> register_func = <span class="literal">nil</span> </span><br><span class="line">register_func =  <span class="function"><span class="keyword">function</span><span class="params">(data_list)</span></span></span><br><span class="line">    <span class="keyword">local</span> oper_func = <span class="built_in">self</span>[func_name]</span><br><span class="line">    	<span class="keyword">if</span> oper_func <span class="keyword">then</span></span><br><span class="line">    	oper_func(<span class="built_in">self</span>, data_list)</span><br><span class="line">	<span class="keyword">end</span> </span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span>	</span><br><span class="line">UserMsgAdapter.RegisterMsgOperate(id, register_func)</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="BaseController-SendFmtToGame-cmd-fmt-str-…"><a href="#BaseController-SendFmtToGame-cmd-fmt-str-…" class="headerlink" title="BaseController:SendFmtToGame(cmd, fmt_str, …)"></a>BaseController:SendFmtToGame(cmd, fmt_str, …)</h5><p>将协议内容整合成一个vo，然后插入到request_protocals_list中</p>
-<h5 id="BaseController-AddCustomDelaySendFmt-buffer"><a href="#BaseController-AddCustomDelaySendFmt-buffer" class="headerlink" title="BaseController.AddCustomDelaySendFmt( buffer )"></a>BaseController.AddCustomDelaySendFmt( buffer )</h5><p>请求将发送的协议放入request_protocals_list内</p>
-<h5 id="BaseController-DelaySendFmtToGameCombine"><a href="#BaseController-DelaySendFmtToGameCombine" class="headerlink" title="BaseController.DelaySendFmtToGameCombine()"></a>BaseController.DelaySendFmtToGameCombine()</h5><p>BaseController.DelaySendFmtToGame()</p>
-<p>将消息缓存到协议队列，然后在在发送的时候按帧触发，避免玩家在操作的时候频繁点击，发包量过大</p>
-<h5 id="BaseController-SendFmtToGameImme-cmd-fmt-str-…"><a href="#BaseController-SendFmtToGameImme-cmd-fmt-str-…" class="headerlink" title="BaseController:SendFmtToGameImme(cmd, fmt_str, …)"></a>BaseController:SendFmtToGameImme(cmd, fmt_str, …)</h5><p>发送重要的协议时可以调用此接口，然后就会立即发送协议一般是那种频率不高，但是内容比较重要，需要及时处理数据的时候</p>
-<p>了解了</p>
-<p>今日学习：</p>
-<p>看了项目的背包模块，</p>
-<p>Model 这一模块没有看</p>
-<p>View 这个模块 中是load_callback（里面有LoadSuccess用来把ui界面的组件和回调方法注册到事件），open_callback将数据跟新到界面UI中，close_callback执行界面关闭时的回调。  </p>
-<p>Controller的话主要就是注册协议和绑定一些需要用到的事件，模块之间通过Controller来交互，引用很多其他模块</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--出现频率比较高的类或者方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--GlobalEventSystem:Fire()</span></span><br><span class="line"><span class="comment">--Util类</span></span><br><span class="line"><span class="comment">--GlobalEventSystem:Bind()</span></span><br><span class="line"><span class="comment">--UiFactory类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--Message.show() 飘字提示</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-5D视角"><a href="#2-5D视角" class="headerlink" title="2.5D视角"></a>2.5D视角</h4><p>AC &#x3D; AB * sin(θ)，又因为θ就是相机的俯仰角，即为我们的所求，所以3D线段和投影线段之间的关系为：<strong>投影线段 &#x3D; 3D线段 * sin(俯仰角)</strong></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210726141850309.png" alt="image-20210726141850309"></p>
-<p>由于相机俯仰运动时的旋转轴平行于AB方向，故而AB的长度即为正方形在3D世界中的真实长度。CD长度垂直于俯仰旋转轴，根据上述公式可得<strong>CD长度&#x3D;3D世界中正方形CD长度 * sin(俯仰角)</strong></p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210726142042723.png" alt="image-20210726142042723"></p>
-<p>故而<strong>30°俯视角是最佳倾斜角</strong>，也就是说<strong>图片宽高比为1:2</strong></p>
-<p>为了切图方便，美术会把贴图的长宽像素值都设为整数，因为美术<strong>无法切出0.5个像素的图片</strong>，那么就要求AB和CD都是整数。如果俯仰角θ也是整数，将会让美术很方便地调整模型制作软件（如Maya、3ds max等）的相机角度，通过3D渲染，将3D模型烘焙成2D图片，以供游戏中直接使用</p>
-<p>遍历三角函数查找表，只有sin(30°)的分子分母都为整数，也就是说只有30°这个角度有可能让长宽都为整数，具体可参看<a target="_blank" rel="noopener" href="https://proofwiki.org/wiki/Niven%27s_Theorem">尼文定理</a>。</p>
-<p><strong>所以2.5D游戏应该称做斜30度视角游戏</strong></p>
-
-      
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">ovo123</p>
+              <h1 itemprop="name headline" class="title">Hexo</h1>
+            </a>
+          
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" data-id="cl303x90j0000wkqa0rmt1ps9" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">ovo123</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
   </div>
-  
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="index wrap">
+    <h2 class="divider">Post List</h2>
+    <div class="segments posts">
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" itemprop="url" title="Untitled"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipey0a334j20zk0m8qpt.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2022-05-10 20:05:54">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-05-10T20:05:54+08:00">2022-05-10</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" itemprop="url" title="Untitled">Untitled</a></h3>
+    <div class="excerpt">
+        # 项目框架学习
+# BaseView 基类：
+以文件名字加冒号调用类似于这种的 BaseView:__init () 皆为方法
+# 初始化方法 __init
+1function BaseView:__init()
+# 定义的成员变量 __defineVar
+定义 view 模块需要的成员变量
+1function BaseView:__defineVar()
+# 打开界面前的预加载 AddPreLoadList
+1preLoad_list = false, -- 打开界面之前需要预加载的资源,除了本模块UI资源外的
+将 ab 的名字，资源列表，以及类型插入到 preLoad_list...
+    </div>
+    <a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" itemprop="url" title="Untitled" class="btn">more...</a>
+  </div>
 </article>
 
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
     </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
   </div>
 
   
-</aside>
-        
+
+
+
+        </div>
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
 
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">1</span>
+        <span class="name">posts</span>
+      </a>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
 </nav>
-    
 
+<div class="social">
+</div>
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
+<ul class="menu">
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
 
 
+</ul>
 
-
-<script src="/js/script.js"></script>
-
-
-
-
-
+      </div>
+    </div>
   </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/05/10/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0Lua%E7%89%88/" title="Untitled">Untitled</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ ovo123</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
 </body>
 </html>
