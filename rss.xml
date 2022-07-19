@@ -1,71 +1,110 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo</title>
+        <title>斯人若彩虹</title>
+        <subtitle></subtitle>
+        <icon>http://example.com/images/favicon.ico</icon>
         <link>http://example.com</link>
+        <author>
+          <name>Rainbow Sea</name>
+        </author>
         <description></description>
-        <language>en</language>
-        <pubDate>Wed, 11 May 2022 20:32:22 +0800</pubDate>
-        <lastBuildDate>Wed, 11 May 2022 20:32:22 +0800</lastBuildDate>
+        <language>zh-CN</language>
+        <pubDate>Tue, 19 Jul 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 19 Jul 2022 00:00:00 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2022/05/11/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%BA%8C%EF%BC%89/</guid>
-            <title></title>
-            <link>http://example.com/2022/05/11/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%BA%8C%EF%BC%89/</link>
-            <pubDate>Wed, 11 May 2022 20:32:22 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;unityshader入门精要渲染流水线-二&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unityshader入门精要渲染流水线-二&#34;&gt;#&lt;/a&gt; UnityShader 入门精要（渲染流水线   二）&lt;/h2&gt;
-&lt;h3 id=&#34;渲染流水线之cpu&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渲染流水线之cpu&#34;&gt;#&lt;/a&gt; 渲染流水线之 CPU&lt;/h3&gt;
-&lt;p&gt;​		我根据《UnityShader 入门精要来》这本书来一步一步的学习，这个系列是记录我的学习过程，方便以后查阅，因为我有一个很大的 &amp;quot;优点&amp;quot;，就是很容易忘！&lt;/p&gt;
-&lt;p&gt;​		乐乐女神在开始就说了，“没有了解渲染流水线的工作流程，就永远没法说自己入门”，这句话我有很深刻的印象，因为在面试的过程中，面试官会问，什么是渲染流水线？如果回答上来，说明你入门了，可以继续交流，如果这个都没说上来，那就证明不熟悉渲染，只是了解，不过也不是绝对的，有些大佬除外。&lt;/p&gt;
-&lt;p&gt;​		渲染流水线是啥？包含了什么？以及这条工作流程最终的结果是啥&lt;/p&gt;
-&lt;h5 id=&#34;cup和gpu之间的通信&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cup和gpu之间的通信&#34;&gt;#&lt;/a&gt; CUP 和 GPU 之间的通信：&lt;/h5&gt;
-&lt;p&gt;​		今天来学习学习新的东西 CPU 和 GPU 之间的通信，昨天我们了解到渲染流水线的起点，也就是完全可以控制的应用阶段，应用阶段分为下面三个小阶段：&lt;/p&gt;
+            <guid isPermalink="true">http://example.com/2022/07/19/%E6%90%AD%E5%BB%BALayeAirBox%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%BC%96%E8%AF%91%E7%A4%BA%E4%BE%8B/</guid>
+            <title>搭建LayeAirBox开发环境及编译示例</title>
+            <link>http://example.com/2022/07/19/%E6%90%AD%E5%BB%BALayeAirBox%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%BC%96%E8%AF%91%E7%A4%BA%E4%BE%8B/</link>
+            <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/" />
+            <pubDate>Tue, 19 Jul 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;一-搭建layeairbox开发环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-搭建layeairbox开发环境&#34;&gt;#&lt;/a&gt; 一、搭建 LayeAirBox 开发环境&lt;/h2&gt;
+&lt;h3 id=&#34;11-安装nodejs环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-安装nodejs环境&#34;&gt;#&lt;/a&gt; 1.1 	安装 Node.js 环境&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;把数据加载到显存中&lt;/li&gt;
-&lt;li&gt;设置渲染状态&lt;/li&gt;
-&lt;li&gt;调用 DrawCall（俗称 DC）&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;win7 的系统，那么最高支持的 node.js 的版本是 13.14 及以下的版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;win10 系统，下最新版的 (LTS 版的最好) 版本就行&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;​     那先说说第一个阶段，将数据加载到显存中&lt;/p&gt;
-&lt;h6 id=&#34;数据加载到显存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据加载到显存&#34;&gt;#&lt;/a&gt; 数据加载到显存：&lt;/h6&gt;
-&lt;p&gt;​		所有的渲染数据都需要从硬盘中加载到系统内存中，然后操作内存中的数据加载到显卡的显存中，因为显卡对于显存的访问便利程度远远大于内存（访问便利程度就是指访问速度和访问的权限，因为大多数显卡没有直接访问内存的权限）&lt;/p&gt;
-&lt;p&gt;如下图所示：渲染所需的数据（两张纹理以及三个网格）从硬盘加载到显存中的流程，这样在渲染时，显卡可以直接很快的去访问显卡中存储的数据来进行渲染。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/rzfYBNC9K8cQIXs.png&#34; alt=&#34;image-20211123210320124&#34;&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight lua&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;需要注意：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;真实渲染的过程更加的复杂，这里只是将流程简单的梳理出来；&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;例如，顶点的位置信息，法线的方向，顶点的颜色，纹理坐标等&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;​		当把数据加载到显存中后，内存中的数据就可以移除了；但是对于一些数据来说，是 CPU 所需要的，CPU 仍然需要访问他们（例如，希望 CPU 可以访问网格数据来进行碰撞检测），那这些就是需要的数据。不希望移除，因为从硬盘加载到内存的过程十分的耗时。&lt;/p&gt;
-&lt;p&gt;数据加载准备完毕以后，接下来就可以通过 CPU 设置渲染状态，来指导 GPU 进行渲染工作。&lt;/p&gt;
-&lt;h6 id=&#34;设置渲染状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置渲染状态&#34;&gt;#&lt;/a&gt; 设置渲染状态：&lt;/h6&gt;
-&lt;p&gt;​		啥是渲染状态 ¿ 通俗的说就是，这些个状态定义了场景中的网格是怎么被渲染出来的，例如：使用了那个顶点着色器或者是片元着色器，光源的属性，材质等，如果没有更改渲染状态，那么所有网格就是一个渲染的状态，下图使用一种渲染状态渲染三个不同网格的结果，由于没有改变 3 个网格的外观，所以看起来是同一个材质的物体&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/Tq3rfEd2MvU4l9W.png&#34; alt=&#34;image-20211123210358539&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​		在准备好所有的工作后，CPU 就需要调用一个渲染命令（DrawCall）来告诉 GPU，数据准备 ok，可以按照设置的指令来开始渲染了&lt;/p&gt;
-&lt;h6 id=&#34;调用drawcall&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#调用drawcall&#34;&gt;#&lt;/a&gt; 调用 DrawCall：&lt;/h6&gt;
-&lt;p&gt;​		实际上 DrawCall 就是一个指令，CPU ——&amp;gt;GPU，这个命令仅仅会指向一个需要被渲染的&lt;strong&gt;图元列表&lt;/strong&gt;，而不会再包含任何材质信息。如下图所示，CPU 告诉 GPU 开始进行渲染，&lt;strong&gt;一个 DrawCall 会指向本次调用需要渲染的图元列表&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/T1OhgbvIre7PMmc.png&#34; alt=&#34;image-20211123211041976&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​		当给定一个 DrwaCall 时，GPU 就会根据渲染状态（如，材质，纹理，shader 等）和所输入的顶点数据来进行计算，最终输出成屏幕上显示的漂漂亮亮的像素。&lt;/p&gt;
-&lt;h6 id=&#34;茶后杂谈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#茶后杂谈&#34;&gt;#&lt;/a&gt; 茶后杂谈：&lt;/h6&gt;
-&lt;p&gt;​		今天是第二天学习 shader，坚持下去，一定会有收获！不求学太多，每天进步一点。&lt;/p&gt;
+&lt;h3 id=&#34;12-安装命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-安装命令&#34;&gt;#&lt;/a&gt; 1.2 	安装命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;检查是不是安装过 node.js 了，如果安装了，出现了 npm 的命令说明，版本号和安装路径，那就跳过这一步&lt;/li&gt;
+&lt;li&gt;没安装，贴上地址 https://nodejs.org/en/，安装完之后再使用下面的命令来检查是否安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;h&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/8nKCG9q6Vxd5zPg.png&#34; alt=&#34;image-20220719104519551&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;13npm命令来安装typescript环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13npm命令来安装typescript环境&#34;&gt;#&lt;/a&gt; 1.3	npm 命令来安装 TypeScript 环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在命令行输入下面指令，按回车键，即可下载并安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm install &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;g typescript&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;如果遇到和下图相似的错误，那就执行一下缓存清理命令（我没出现过）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/pKIBQmkde5CzbvS.png&#34; alt=&#34;image-20220719153348983&#34; /&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm cache clean &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;force&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;安装成功以后使用下面命令，如果出现类似下图的 TypeScript 的版本信息表示安装完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tsc &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;v&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/ubnX4cOMlhNSz6T.png&#34; alt=&#34;image-20220719153705149&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;二-layaair示例项目源码编译运行指南&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-layaair示例项目源码编译运行指南&#34;&gt;#&lt;/a&gt; 二、LayaAir 示例项目源码编译运行指南&lt;/h2&gt;
+&lt;h3 id=&#34;21安装git环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21安装git环境&#34;&gt;#&lt;/a&gt; 2.1	安装 git 环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;度娘搜一下安装教程（这里就不再赘述了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;22克隆layaair源码项目到本地&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22克隆layaair源码项目到本地&#34;&gt;#&lt;/a&gt; 2.2	克隆 LayaAir 源码项目到本地&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在自己想要放的盘符建一个空文件夹（绝对路径不要包含中文）&lt;/li&gt;
+&lt;li&gt;然后在你创建的目录下面右键，如下图打开命令行输入下面命令，就可以下载了（不过比较的慢，国内嘛）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git clone https&lt;span class=&#34;token dfn builtin&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token monadic-operator operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token monadic-operator operator&#34;&gt;/&lt;/span&gt;github&lt;span class=&#34;token dyadic-operator operator&#34;&gt;.&lt;/span&gt;com&lt;span class=&#34;token monadic-operator operator&#34;&gt;/&lt;/span&gt;layabox&lt;span class=&#34;token monadic-operator operator&#34;&gt;/&lt;/span&gt;LayaAir&lt;span class=&#34;token dyadic-operator operator&#34;&gt;.&lt;/span&gt;git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/hcKnN5ZGF98RPkJ.png&#34; alt=&#34;image-20220719154624180&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;23安装源码依赖包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23安装源码依赖包&#34;&gt;#&lt;/a&gt; 2.3	安装源码依赖包&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在刚才拉完源码的目录下打开命令行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/MR5hSlb74ftGgDs.png&#34; alt=&#34;image-20220719154909858&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后在命令行中输入下面的命令，如果有警告，可以忽略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm install&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;24运行layaair引擎示例代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24运行layaair引擎示例代码&#34;&gt;#&lt;/a&gt; 2.4	运行 LayaAir 引擎示例代码&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;官方文档里面用 vscode 打开后，运行&lt;strong&gt; Ctrl + Shift + B&lt;/strong&gt;，然后如下图，所示，先构建配置文件，然后在编译源码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/Lbdxs6uPqpMk38y.png&#34; alt=&#34;image-20220719155421094&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果在点了第二步之后，报错 gulp 不是内部命令，和 2.3 安装依赖包的操作一样，输入下面命令，这样这个命令就添加了（如果还是报错，再执行一下，第二句命令）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm install &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;g gulp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm install&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;如果上两步都 OK 了，然后在 vscode 中 F5 运行，当走到要执行 anywhere 时报错，那么就是因为没有安装 anywhere 依赖，2.3 安装依赖包的操作一样输入下面命令，安装完之后再编译一遍，那么浏览器就会出现下面的页面，打开 indexTSC.html 就可以看到示例项目了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/kpS9iRLXt3f62cH.png&#34; alt=&#34;image-20220719160502902&#34; /&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight apl&#34;&gt;&lt;figcaption data-lang=&#34;APL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;npm install &lt;span class=&#34;token function&#34;&gt;-&lt;/span&gt;g anywhere&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/vJyIebANMPGYaKB.png&#34; alt=&#34;image-20220719160401070&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/07/19/s8zqatbkGJ2SOLh.png&#34; alt=&#34;image-20220719160603343&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/05/11/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%B8%80%EF%BC%89/</guid>
-            <title></title>
-            <link>http://example.com/2022/05/11/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%B8%80%EF%BC%89/</link>
-            <pubDate>Wed, 11 May 2022 20:32:22 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;unityshader入门精要渲染流水线-一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unityshader入门精要渲染流水线-一&#34;&gt;#&lt;/a&gt; UnityShader 入门精要（渲染流水线   一）&lt;/h2&gt;
-&lt;h3 id=&#34;渲染流水线&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渲染流水线&#34;&gt;#&lt;/a&gt; 渲染流水线&lt;/h3&gt;
+            <guid isPermalink="true">http://example.com/2022/05/17/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%B8%80%EF%BC%89/</guid>
+            <title>UnityShader入门精要（渲染流水线 一）</title>
+            <link>http://example.com/2022/05/17/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%B8%80%EF%BC%89/</link>
+            <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/" />
+            <pubDate>Tue, 17 May 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;unityshader入门精要渲染流水线-一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unityshader入门精要渲染流水线-一&#34;&gt;#&lt;/a&gt; UnityShader 入门精要（渲染流水线   一）&lt;/h2&gt;
+&lt;h3 id=&#34;渲染流水线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#渲染流水线&#34;&gt;#&lt;/a&gt; 渲染流水线&lt;/h3&gt;
 &lt;p&gt;​	接着上回书说到，我根据《UnityShader 入门精要来》这本书来一步一步的学习，这个系列是记录我的学习过程，方便以后查阅，因为我有一个很大的 &amp;quot;优点&amp;quot;，就是很容易忘！&lt;/p&gt;
-&lt;p&gt;​	乐乐女神在开始就说了，“没有了解渲染流水线的工作流程，就永远没法说自己入门”，这句话我有很深刻的印象，因为在面试的过程中，面试官会问，什么是渲染流水线？如果回答上来，说明你入门了，可以继续交流，如果这个都没说上来，那就证明不熟悉渲染，只是了解，不过也不是绝对的，有些大佬除外。&lt;/p&gt;
+&lt;p&gt;​	乐乐女神在开始就说了，&amp;quot;没有了解渲染流水线的工作流程，就永远没法说自己入门&amp;quot;，这句话我有很深刻的印象，因为在面试的过程中，面试官会问，什么是渲染流水线？如果回答上来，说明你入门了，可以继续交流，如果这个都没说上来，那就证明不熟悉渲染，只是了解，不过也不是绝对的，有些大佬除外。&lt;/p&gt;
 &lt;p&gt;​	渲染流水线是啥？包含了什么？以及这条工作流程最终的结果是啥&lt;/p&gt;
-&lt;h5 id=&#34;阐释&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#阐释&#34;&gt;#&lt;/a&gt; 阐释：&lt;/h5&gt;
+&lt;h5 id=&#34;阐释&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阐释&#34;&gt;#&lt;/a&gt; 阐释：&lt;/h5&gt;
 &lt;p&gt;​	渲染流水线的工作任务在于一个三维场景的触发，计算机需要从一系列的顶点数据，纹理等信息出发，然后又 CPU 和 GPU 来共同完成的&lt;/p&gt;
 &lt;p&gt;​	上面说的很笼统，那就细分一下，将渲染分为三个阶段：&lt;/p&gt;
 &lt;p&gt;​	应用阶段 --&amp;gt; 几何阶段 --&amp;gt; 光栅化阶段&lt;/p&gt;
-&lt;img data-src=&#34;https://i.loli.net/2021/11/22/7RNYuvTBDe4OAhJ.png&#34; alt=&#34;image-20211122194636560&#34; style=&#34;zoom: 67%;&#34; /&gt;
-&lt;h5 id=&#34;三个阶段&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三个阶段&#34;&gt;#&lt;/a&gt; 三个阶段&lt;/h5&gt;
-&lt;h6 id=&#34;应用阶段&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#应用阶段&#34;&gt;#&lt;/a&gt; 应用阶段：&lt;/h6&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjEvMTEvMjIvN1JOWXV2VEJEZTRPQWhKLnBuZw==&#34;&gt;https://i.loli.net/2021/11/22/7RNYuvTBDe4OAhJ.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20211122194636560&amp;quot; style=&amp;quot;zoom: 67%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;h5 id=&#34;三个阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三个阶段&#34;&gt;#&lt;/a&gt; 三个阶段&lt;/h5&gt;
+&lt;h6 id=&#34;应用阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用阶段&#34;&gt;#&lt;/a&gt; 应用阶段：&lt;/h6&gt;
 &lt;p&gt;​		这个阶段是有我们的应用主导的，一般是 CPU 来负责的，对于这部分的内容有绝对的控制，或者说是可编程可开发的阶段，这个阶段有&lt;strong&gt;三个主要的任务&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;准备好场景数据，比如摄像机的位置，视椎体（如果学过 Unity 的码友，这个其实就是场景摄像机可以渲染的范围，如下图所示，我画的是一个平面的，在 Unity 中是一个梯形立方体形状），还有场景中包含的模型数据（顶点信息，法线的方向，顶点的颜色，纹理坐标），光源等&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/22/vmGtgC1xspbL4BF.png&#34; alt=&#34;image-20211122200532800&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/22/vmGtgC1xspbL4BF.png&#34; alt=&#34;image-20211122200532800&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;粗粒度剔除（先不要纠结，知道有这一步就好，其实简单理解就是粗略的筛选，将不需要的信息和不可见的物体剔除）&lt;/p&gt;
@@ -74,16 +113,53 @@
 &lt;p&gt;设置&lt;strong&gt;每个模型&lt;/strong&gt;的&lt;strong&gt;渲染状态&lt;/strong&gt;，这些渲染的状态包括但不限于它使用的材质（漫反射，高光反射颜色），使用的纹理，使用的 shader 等，这里最最最重要的就是输出&lt;strong&gt;渲染所需的几何信息&lt;/strong&gt;，&lt;strong&gt;渲染图元&lt;/strong&gt;，渲染图元可以是点，可以是线，也可以是三角面等。然后将这些渲染图元传递给下一个工作流水线 ---------- 几何阶段。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h6 id=&#34;几何阶段&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#几何阶段&#34;&gt;#&lt;/a&gt; 几何阶段：&lt;/h6&gt;
-&lt;p&gt;​		几何阶段处理我们要绘制的几何相关的工作，例如，需要绘制的图元是什么，怎样绘制他们？ 在哪儿绘制？&lt;br&gt;
-​	这一个阶段通常是在 GPU 上进行的。&lt;br&gt;
+&lt;h6 id=&#34;几何阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#几何阶段&#34;&gt;#&lt;/a&gt; 几何阶段：&lt;/h6&gt;
+&lt;p&gt;​		几何阶段处理我们要绘制的几何相关的工作，例如，需要绘制的图元是什么，怎样绘制他们？ 在哪儿绘制？&lt;br /&gt;
+​	这一个阶段通常是在 GPU 上进行的。&lt;br /&gt;
 ​		几何阶段负责和每一个图元打交道，进行&lt;strong&gt;逐顶点，逐多边形的操作&lt;/strong&gt;，这个阶段可以分为更小的流水线，几何阶段还有一个很重要的任务就是把&lt;strong&gt;顶点坐标变化到屏幕空间中&lt;/strong&gt;，再交给光栅器处理就。对输入的&lt;strong&gt;渲染图元&lt;/strong&gt;进行多歩拆解处理，然后将会输出屏幕空间的二维顶点坐标，每个顶点对应的深度值，着色等相关的信息，传递给光栅化阶段。&lt;/p&gt;
-&lt;h6 id=&#34;光栅化阶段&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#光栅化阶段&#34;&gt;#&lt;/a&gt; 光栅化阶段：&lt;/h6&gt;
+&lt;h6 id=&#34;光栅化阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光栅化阶段&#34;&gt;#&lt;/a&gt; 光栅化阶段：&lt;/h6&gt;
 &lt;p&gt;​		这一阶段将会使用几何阶段传递的数据产生屏幕上的像素，渲染出最终的图像，这一阶段也是在 GPU 上进行的，光栅化的任务就是决定每个&lt;strong&gt;渲染图元&lt;/strong&gt;中的那些像素被绘制到屏幕上来，它需要对几何阶段得到的&lt;strong&gt;逐顶点数据&lt;/strong&gt;（如纹理坐标，顶点颜色等）插值，然后&lt;strong&gt;逐像素&lt;/strong&gt;处理。&lt;/p&gt;
-&lt;h6 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结：&lt;/h6&gt;
+&lt;h6 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结：&lt;/h6&gt;
 &lt;p&gt;​		其实这三个流水线是让我们在学习或者是认识流水线的时候划分的三个阶段，每一个阶段中间还有很多小的流水线，明天的章节中，是 GPU 真正实现上述概念的流水线。&lt;/p&gt;
-&lt;h6 id=&#34;茶后杂谈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#茶后杂谈&#34;&gt;#&lt;/a&gt; 茶后杂谈：&lt;/h6&gt;
+&lt;h6 id=&#34;茶后杂谈&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#茶后杂谈&#34;&gt;#&lt;/a&gt; 茶后杂谈：&lt;/h6&gt;
 &lt;p&gt;​		其实之前有学过一段时间，但是晒网了，没有继续保持，导致自己迷茫了很长一段时间，现在准备从最基础开始一步一步的向前走，将基础走牢固，切记不可眼高手低，哪怕是很小的知识点，也需要去记忆巩固，走好每一步，永远相信自己，这个系列我会一直更新，每天学一点，，不为别的，只为自己更新。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/05/17/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%BA%8C%EF%BC%89/</guid>
+            <title>UnityShader入门精要（渲染流水线 二）</title>
+            <link>http://example.com/2022/05/17/UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81%EF%BC%88%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%20%E4%BA%8C%EF%BC%89/</link>
+            <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/" />
+            <pubDate>Tue, 17 May 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;unityshader入门精要渲染流水线-二&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unityshader入门精要渲染流水线-二&#34;&gt;#&lt;/a&gt; UnityShader 入门精要（渲染流水线   二）&lt;/h2&gt;
+&lt;h3 id=&#34;渲染流水线之cpu&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#渲染流水线之cpu&#34;&gt;#&lt;/a&gt; 渲染流水线之 CPU&lt;/h3&gt;
+&lt;p&gt;​		我根据《UnityShader 入门精要来》这本书来一步一步的学习，这个系列是记录我的学习过程，方便以后查阅，因为我有一个很大的 &amp;quot;优点&amp;quot;，就是很容易忘！&lt;/p&gt;
+&lt;p&gt;​		乐乐女神在开始就说了，&amp;quot;没有了解渲染流水线的工作流程，就永远没法说自己入门&amp;quot;，这句话我有很深刻的印象，因为在面试的过程中，面试官会问，什么是渲染流水线？如果回答上来，说明你入门了，可以继续交流，如果这个都没说上来，那就证明不熟悉渲染，只是了解，不过也不是绝对的，有些大佬除外。&lt;/p&gt;
+&lt;p&gt;​		渲染流水线是啥？包含了什么？以及这条工作流程最终的结果是啥&lt;/p&gt;
+&lt;h5 id=&#34;cup和gpu之间的通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cup和gpu之间的通信&#34;&gt;#&lt;/a&gt; CUP 和 GPU 之间的通信：&lt;/h5&gt;
+&lt;p&gt;​		今天来学习学习新的东西 CPU 和 GPU 之间的通信，昨天我们了解到渲染流水线的起点，也就是完全可以控制的应用阶段，应用阶段分为下面三个小阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把数据加载到显存中&lt;/li&gt;
+&lt;li&gt;设置渲染状态&lt;/li&gt;
+&lt;li&gt;调用 DrawCall（俗称 DC）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​     那先说说第一个阶段，将数据加载到显存中&lt;/p&gt;
+&lt;h6 id=&#34;数据加载到显存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据加载到显存&#34;&gt;#&lt;/a&gt; 数据加载到显存：&lt;/h6&gt;
+&lt;p&gt;​		所有的渲染数据都需要从硬盘中加载到系统内存中，然后操作内存中的数据加载到显卡的显存中，因为显卡对于显存的访问便利程度远远大于内存（访问便利程度就是指访问速度和访问的权限，因为大多数显卡没有直接访问内存的权限）&lt;/p&gt;
+&lt;p&gt;如下图所示：渲染所需的数据（两张纹理以及三个网格）从硬盘加载到显存中的流程，这样在渲染时，显卡可以直接很快的去访问显卡中存储的数据来进行渲染。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/rzfYBNC9K8cQIXs.png&#34; alt=&#34;image-20211123210320124&#34; /&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight lua&#34;&gt;&lt;figcaption data-lang=&#34;lua&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;需要注意：&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;真实渲染的过程更加的复杂，这里只是将流程简单的梳理出来；&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;例如，顶点的位置信息，法线的方向，顶点的颜色，纹理坐标等&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​		当把数据加载到显存中后，内存中的数据就可以移除了；但是对于一些数据来说，是 CPU 所需要的，CPU 仍然需要访问他们（例如，希望 CPU 可以访问网格数据来进行碰撞检测），那这些就是需要的数据。不希望移除，因为从硬盘加载到内存的过程十分的耗时。&lt;/p&gt;
+&lt;p&gt;数据加载准备完毕以后，接下来就可以通过 CPU 设置渲染状态，来指导 GPU 进行渲染工作。&lt;/p&gt;
+&lt;h6 id=&#34;设置渲染状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置渲染状态&#34;&gt;#&lt;/a&gt; 设置渲染状态：&lt;/h6&gt;
+&lt;p&gt;​		啥是渲染状态 ¿ 通俗的说就是，这些个状态定义了场景中的网格是怎么被渲染出来的，例如：使用了那个顶点着色器或者是片元着色器，光源的属性，材质等，如果没有更改渲染状态，那么所有网格就是一个渲染的状态，下图使用一种渲染状态渲染三个不同网格的结果，由于没有改变 3 个网格的外观，所以看起来是同一个材质的物体&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/Tq3rfEd2MvU4l9W.png&#34; alt=&#34;image-20211123210358539&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​		在准备好所有的工作后，CPU 就需要调用一个渲染命令（DrawCall）来告诉 GPU，数据准备 ok，可以按照设置的指令来开始渲染了&lt;/p&gt;
+&lt;h6 id=&#34;调用drawcall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#调用drawcall&#34;&gt;#&lt;/a&gt; 调用 DrawCall：&lt;/h6&gt;
+&lt;p&gt;​		实际上 DrawCall 就是一个指令，CPU ——&amp;gt;GPU，这个命令仅仅会指向一个需要被渲染的&lt;strong&gt;图元列表&lt;/strong&gt;，而不会再包含任何材质信息。如下图所示，CPU 告诉 GPU 开始进行渲染，&lt;strong&gt;一个 DrawCall 会指向本次调用需要渲染的图元列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/11/23/T1OhgbvIre7PMmc.png&#34; alt=&#34;image-20211123211041976&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​		当给定一个 DrwaCall 时，GPU 就会根据渲染状态（如，材质，纹理，shader 等）和所输入的顶点数据来进行计算，最终输出成屏幕上显示的漂漂亮亮的像素。&lt;/p&gt;
+&lt;h6 id=&#34;茶后杂谈&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#茶后杂谈&#34;&gt;#&lt;/a&gt; 茶后杂谈：&lt;/h6&gt;
+&lt;p&gt;​		今天是第二天学习 shader，坚持下去，一定会有收获！不求学太多，每天进步一点。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
