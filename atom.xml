@@ -8,7 +8,130 @@
     <author>
       <name>Rainbow Sea</name>
     </author>
-    <updated>2022-07-18T16:00:00.000Z</updated>
+    <updated>2022-11-30T16:00:00.000Z</updated>
+    <entry>
+        <id>http://example.com/2022/12/01/c#/c#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+        <title>c#基础</title>
+        <link rel="alternate" href="http://example.com/2022/12/01/c#/c#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+        <content type="html">&lt;h2 id=&#34;1数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1数据类型&#34;&gt;#&lt;/a&gt; 1. 数据类型&lt;/h2&gt;
+&lt;h3 id=&#34;11-值类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-值类型&#34;&gt;#&lt;/a&gt; 1.1 值类型&lt;/h3&gt;
+&lt;p&gt;​	看值类型之前，了解到 c# 中的八种整数类型，分别是 &lt;code&gt;sbyte，byte，short，ushort，int，uint，long，ulong&lt;/code&gt; ，基类库为 &lt;code&gt;System.Int&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212011741218.png&#34; alt=&#34;image-20221201172545156&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-浮点类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-浮点类型&#34;&gt;#&lt;/a&gt; 1.2 浮点类型&lt;/h3&gt;
+&lt;p&gt;​	浮点数的精度由有效数位的个数决定的，从 &lt;code&gt;.Net Core 3.0&lt;/code&gt;  开始， &lt;code&gt;double&lt;/code&gt; （双精度）型浮点可以表示的有效数数子最多为 &lt;code&gt;17&lt;/code&gt;  位， &lt;code&gt;float&lt;/code&gt;  型为最多九位（有一个前提，是该浮点数不是由字符串转换得来的），浮点数类型采用二进制浮点数来存储数值，这种方法会在小数部分产生舍入的误差问题，所以在实际的运算之中，用十进制和二进制所表示的实数都存在舍入的误差问题，作为对比， &lt;code&gt;c#&lt;/code&gt; 的 &lt;code&gt;decimal&lt;/code&gt;  类型在其所允许的进度范围之内不会有误差的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212011751475.png&#34; alt=&#34;image-20221201175117417&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;13-decimal类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-decimal类型&#34;&gt;#&lt;/a&gt; 1.3 decimal 类型&lt;/h3&gt;
+&lt;p&gt;​	 &lt;code&gt;c#&lt;/code&gt; 提供了 128 位精度的十进制浮点类型，它适合大而精确的计算，适用于金融的计算，decimal 类型保证范围内所有十进制数都是精确的，即 0.1 就是 0.1，而不是近似值，虽然精度高，但是范围小，是在一个可控制的范围，所以就会出现浮点数类型转换位 decimal 类型发生溢出的错误&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212011759514.png&#34; alt=&#34;image-20221201175941461&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;14-布尔类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-布尔类型&#34;&gt;#&lt;/a&gt; 1.4 布尔类型&lt;/h3&gt;
+&lt;p&gt;​	c# 的第四个基元类型是 &lt;code&gt;布尔类型&lt;/code&gt; （Boolen），允许的值包括关键字 true 和 false 其基类为 &lt;code&gt;System.Boolen&lt;/code&gt; ，理论上一个二进制位足以容纳一个布尔类型的值，但 bool 实际上的大小为一个字节&lt;/p&gt;
+&lt;h3 id=&#34;15-字符类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#15-字符类型&#34;&gt;#&lt;/a&gt; 1.5 字符类型&lt;/h3&gt;
+&lt;p&gt;​	字符类型 char 表示 16 位字符，取值的范围对应于 Unicode 字符集，从技术上说，char 的大小和 16 位无符号整型（ushort）相同，但是 char 是 c# 的特有类型，要单独的对待。char 类型的基类为 &lt;code&gt;System.Char&lt;/code&gt; ，有的字符不可以直接插入源代码，需要再进行特殊处理，首先输入反斜杠（\）前缀，再加上特殊的字符代码。反斜杠加上特殊字符代码统称为转义序列。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212012021093.png&#34; alt=&#34;image-20221201202144047&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212012025693.png&#34; alt=&#34;image-20221201202524650&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;16-字符串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#16-字符串&#34;&gt;#&lt;/a&gt; 1.6 字符串&lt;/h3&gt;
+&lt;p&gt;​	零或者是多个字符的有限序列称为字符串，c# 的字符串是 string 类型，基类为 &lt;code&gt;System.String&lt;/code&gt; ，string 是一种不可变类型。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#### 1.61 字面值
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	字面值字符串输入代码，需要将文本放入到双引号中（&amp;quot;Hello，World&amp;quot;），c# 允许在字符串前使用 @符号，指明转义序列不被处理，结果是一个 &lt;code&gt;逐字字符串字面值&lt;/code&gt; ，它会将反斜杠当做普通的字符，还会逐字解释所有的空白字符&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;//在Unity中也是遵守这个条件的 
+void Start()
+&amp;#123;
+    //在双引号之前加上@，就可以将字符串原样输出，转移字符将不处理
+    string str = @&amp;quot;\n\t$%^&amp;amp;*(((((**&amp;amp;^&amp;amp;^^^ &amp;quot;;
+    Debug.Log(str);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021543031.png&#34; alt=&#34;image-20221202154355989&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​	假如同一个字符串字面值在程序集中多次出现，编译器在程序集中只定义字符串一次，且所有变量都指向它，如此，假如在代码中多次插入包含大量字符的同一个字符串字面值，最终的程序集只反映其中一个的大小。要想链接字符串就需要用 &lt;code&gt;+&lt;/code&gt;  号操作符。&lt;/p&gt;
+&lt;h4 id=&#34;162-字符串插值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#162-字符串插值&#34;&gt;#&lt;/a&gt; 1.62 字符串插值&lt;/h4&gt;
+&lt;p&gt;​	字符串可以用插值技术嵌入表达式，语法就是在字符串前添加 $ 符号，并在字符中用一对大括号嵌入表达式，如下所示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void Start()
+&amp;#123;
+    string name = &amp;quot;rainbow&amp;quot;;
+    int age = 15;
+    string sex = &amp;quot;女&amp;quot;;
+    //使用$来实现字符串的格式化
+    string desc = $&amp;quot;我是&amp;#123;name&amp;#125;,今年&amp;#123;age&amp;#125;岁了,我是&amp;#123;sex&amp;#125;孩子喔！&amp;quot;;
+    Debug.Log(desc);
+&amp;#125;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021542843.png&#34; alt=&#34;image-20221202154242787&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​	而且，逐字和插值可组合使用，但是要先指定 $，再指定 @，适用场景为字符串太长，需要字符逐字输出，那么就可以做到，稍微修改一下代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void Start()
+&amp;#123;
+    string name = &amp;quot;rainbow&amp;quot;;
+    int age = 15;
+    string sex = &amp;quot;女&amp;quot;;
+    //使用$来实现字符串的格式化,加上@逐字输出
+    string desc = $@&amp;quot;我是&amp;#123;name&amp;#125;,今年&amp;#123;age&amp;#125;岁了,
+               ** **
+             **  *  **
+            ***     ***
+             **     **
+              **   **
+                ***
+            我是&amp;#123;sex&amp;#125;孩子喔！&amp;quot;;
+    Debug.Log(desc);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021550918.png&#34; alt=&#34;image-20221202155058869&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​	字符串插值的内部工作原理就是调用了 &lt;code&gt;string.Format()&lt;/code&gt;  方法的 &lt;code&gt;语法糖&lt;/code&gt; ，如下面代码所示，两个的效果是一模一样的&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void Start()
+&amp;#123;
+    string name = &amp;quot;rainbow&amp;quot;;
+    int age = 15;
+    string sex = &amp;quot;女&amp;quot;;
+    //$语法糖其实是调用了string.Format()
+    object[] args = new object[] &amp;#123;name, age, sex&amp;#125;;
+    string desc = string.Format(&amp;quot;我是&amp;#123;0&amp;#125;,今年&amp;#123;1&amp;#125;岁了, 我是&amp;#123;2&amp;#125;孩	  子喔！&amp;quot;, args);
+    Debug.Log(desc);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021558657.png&#34; alt=&#34;image-20221202155809612&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;163-字符串方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#163-字符串方法&#34;&gt;#&lt;/a&gt; 1.63 字符串方法&lt;/h4&gt;
+&lt;p&gt;​	string 类型也提供了几个方法来格式化，链接和比较字符串，具体的可以查看下面的 Api 以及示例，有了字符串插值的时候， &lt;code&gt;string.Format()&lt;/code&gt;  就用的比较少了，但是在幕后，编译成 CIL 后都转换为调用 &lt;code&gt;string.Concat()&lt;/code&gt;  和 &lt;code&gt;string.Foramat()&lt;/code&gt;  来处理字符串的字面值。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021602109.png&#34; alt=&#34;image-20221202160209036&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​	上表列出的都是静态方法，这意味着为了调用方法，需要在方法名之前附加方法所在的类型，（实例方法调用就不以类型名作为前缀了，而是以变量名字，或者对实例的其他引用）作为前缀。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021607155.png&#34; alt=&#34;image-20221202160753103&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021608944.png&#34; alt=&#34;image-20221202160811881&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高级主题：using 和 using static 指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	之前调用静态方法需要附加命名空间和类型名前缀， &lt;code&gt;using static&lt;/code&gt;  指令添加到文件顶部，每次使用程序集的方法时候，直接使用其中命名的方法即可， &lt;code&gt;using static只支持静态方法或者属性，不支持实例方法&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;​	using 是直接忽略掉命名空间前缀，使用 &lt;code&gt;using&lt;/code&gt;  指令时，不管是在实例化时，还是在调用静态方法时，还是在 c#6.0 新增的 nameof 操作符的时候，都可以省略对命名空间的引用，因为 &lt;code&gt;using作用于整个文件或者是命名空间中&lt;/code&gt; 。&lt;/p&gt;
+&lt;h4 id=&#34;164-字符串格式化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#164-字符串格式化&#34;&gt;#&lt;/a&gt; 1.64 字符串格式化&lt;/h4&gt;
+&lt;p&gt;​	要在插值或者格式化的字符串中添加实际的左右大括号可以连写两个大括号表示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void Start()
+&amp;#123;
+    string name = &amp;quot;rainbow&amp;quot;;
+    int age = 15;
+    string sex = &amp;quot;女&amp;quot;;
+    //使用$来实现字符串的格式化
+    object[] args = new object[] &amp;#123;name, age, sex&amp;#125;;
+    string desc = string.Format(&amp;quot;我是&amp;#123;&amp;#123;&amp;#123;0&amp;#125;&amp;#125;&amp;#125;,今年&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;岁了, 	我是&amp;#123;&amp;#123;&amp;#123;2&amp;#125;&amp;#125;&amp;#125;孩子喔！&amp;quot;, args);
+    Debug.Log(desc);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021622139.png&#34; alt=&#34;image-20221202162202092&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;165-换行符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#165-换行符&#34;&gt;#&lt;/a&gt; 1.65 换行符&lt;/h4&gt;
+&lt;p&gt;​	跨平台的话要依赖 &lt;code&gt;System.WriteLine()&lt;/code&gt;  和 &lt;code&gt;System.Environment.NewLine&lt;/code&gt;  而不是 &lt;code&gt;\n&lt;/code&gt;  来确保跨平台兼容.&lt;/p&gt;
+&lt;h4 id=&#34;166-字符串长度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#166-字符串长度&#34;&gt;#&lt;/a&gt; 1.66 字符串长度&lt;/h4&gt;
+&lt;p&gt;​	判断字符串长度可以使用 &lt;code&gt;string&lt;/code&gt;  的 &lt;code&gt;Length&lt;/code&gt;  成员（或者叫 &lt;code&gt;字段&lt;/code&gt; ），该成员是 &lt;code&gt;只读属性&lt;/code&gt; ，不能设置，调用时也不需要任何的参数，如下面代码所示，字符串的长度不能直接设置，因为字符串的长度是更具字符数计算出来的，而且字符串是不可变的&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void Start()
+&amp;#123;
+ 	string str = &amp;quot;rainbow_ovo&amp;quot;;
+    Debug.Log($&amp;quot;The str`s length is &amp;#123;str.Length&amp;#125;&amp;quot;);   
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ovo123/blog_piggo_texture/master/images/202212021636245.png&#34; alt=&#34;image-20221202163627208&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;167-字符串长度不可变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#167-字符串长度不可变&#34;&gt;#&lt;/a&gt; 1.67 字符串长度不可变&lt;/h4&gt;
+&lt;p&gt;​	string 类型由于性能的问题，一旦定义就无法更改，只能新开辟空间，而且旧的字符串也不可以更改，即使使用 &lt;code&gt;text.ToUpper()&lt;/code&gt;  也只是返回一个新的字符串而已，用一个新的变量保存，原来的字符串还在，在内存中并没有改变。&lt;/p&gt;
+&lt;p&gt;​	如果要大量修改字符串，就可以考虑使用 &lt;code&gt;System.Text.StringBuilder&lt;/code&gt;  类型，而不是 &lt;code&gt;string&lt;/code&gt;  类型，因为 &lt;code&gt;StringBuilder&lt;/code&gt;  的实例方法会修改 &lt;code&gt;StringBuilder本身的数据，不返回新的字符串&lt;/code&gt; ，也就不会有多余的内存占用。&lt;/p&gt;
+</content>
+        <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/" />
+        <updated>2022-11-30T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/07/19/TypeScript/TypeScript%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
         <title>TypeScript基础数据类型</title>
